@@ -1,4 +1,4 @@
-# Short Link Api
+## Short Link Api
 
 ###### -- create
 POST  /api/1.0/short_links
@@ -76,3 +76,14 @@ response, `204`
 {
 }
 <br>
+
+## Setup
+
+create database
+<br>
+`python manage.py db_startup`
+<br>
+
+run app
+<br>
+`python manage.py`
