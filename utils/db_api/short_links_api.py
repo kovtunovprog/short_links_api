@@ -39,8 +39,8 @@ def get_instance_short_link(short_link_id):
     short_link_obj = ShortLinkModel.query.filter_by(id=short_link_id).first()
     if short_link_obj is None:
         return False
-    return {'id': short_link_obj.id, 'default_url': short_link_obj.default_url, 'short_url': short_link_obj.short_url,
-            'days_actual': short_link_obj.days_actual}
+    return {'id': short_link_obj.id, 'default_url': short_link_obj.default_url, 'short_url': str(request.host_url) +
+            short_link_obj.short_url, 'days_actual': short_link_obj.days_actual}
 
 
 def edit_instance_short_link(short_link_id, default_url=None, days_actual=None):
